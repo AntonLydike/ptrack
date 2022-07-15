@@ -1,0 +1,24 @@
+[project]
+name = "ptrack"
+version = "1.0.0"
+authors = [
+  { name="Anton Lydike", email="me@antonlydike.de" },
+]
+description = "Package tracker (postal)"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "click"
+]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
