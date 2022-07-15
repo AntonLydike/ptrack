@@ -13,12 +13,13 @@ Where the postal service name can be gathered from the list further down this RE
 
 After that you can run `python3 -m ptrack.cli view /path/to/trackers_file` to see an automatically updating view of the trackers.
 
-
 ## Supported services:
 
  - DHL Germany (`dhl`)
  - Asendia (`asendia`)
  - GlobalPost (`globalpost`) (very basic implementation, missing accurate progress and other bits.)
+
+Something missing? Please open an issue with an example tracking link, or if you don't want to share personal details online, PM me, or if you are very secretive, implement the module yourself! It's not that hard to extend!
 
 ### Planned
  
