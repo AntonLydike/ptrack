@@ -17,6 +17,7 @@ After that you can run `python3 -m ptrack.cli view /path/to/trackers_file` to se
 ## Supported services:
 
  - DHL Germany (`dhl`)
+ - Asendia (`asendia`)
 
 ### Planned
  

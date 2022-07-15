@@ -67,6 +67,8 @@ class PackageWatcher:
                 new_tracks[id] = self.trackers[id.source].get_details_for(id)
             else:
                 new_tracks[id] = self.tracks[id]
+        if must_rescan:
+            self.last_scan = time.time()
         self.last_file_version = os.stat(self.source_file_name).st_mtime
         return new_tracks
 

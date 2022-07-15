@@ -66,8 +66,10 @@ def _get_package_state(details: dict):
         return PackageState.ANNOUNCED
     if state_number == 1:
         return PackageState.ARRIVED_AT_INGRES
-    if state_number <= 3:
+    if state_number == 2:
         return PackageState.ON_THE_WAY
+    if state_number == 3:
+        return PackageState.ARRIVED_AT_DESTINATION
     if state_number == 4:
         return PackageState.OUT_FOR_DELIVERY
 
@@ -75,7 +77,7 @@ def _get_package_state(details: dict):
 
 
 class DHL_DE(TrackingSupplier):
-    name = "DHL Germany"
+    name = "dhl"
     config: DHL_DE_Config
 
     def get_details_for(self, details: TrackingIdentifier) -> Optional[TrackingState]:
