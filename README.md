@@ -18,6 +18,7 @@ After that you can run `python3 -m ptrack.cli view /path/to/trackers_file` to se
 
  - DHL Germany (`dhl`)
  - Asendia (`asendia`)
+ - GlobalPost (`globalpost`) (very basic implementation, missing accurate progress and other bits.)
 
 ### Planned
  
