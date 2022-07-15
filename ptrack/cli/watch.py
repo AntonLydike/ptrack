@@ -162,7 +162,7 @@ def generate_progress_bar(at: int, ttl: int):
 def print_date_time(dt: datetime):
     if dt < datetime(2000, 1, 1, tzinfo=dt.tzinfo):
         return "??.??. ??:??"
-    return dt.strftime('%d.%m. %H:%m')
+    return dt.strftime('%d.%m. %H:%M')
 
 def get_icon_for(state: PackageState):
     if state == PackageState.ANNOUNCED:
