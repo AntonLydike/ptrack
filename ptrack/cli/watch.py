@@ -111,6 +111,8 @@ class PackageWatcher:
             return self.print_diff_compact(new_tracks)
         elif self.display_mode == 'i3bar':
             return self.print_diff_i3bar(new_tracks)
+        elif self.display_mode == 'exhaustive':
+            return self.print_exhaustive(new_tracks)
 
         return self.print_diff_compact(new_tracks)
 
@@ -148,6 +150,10 @@ class PackageWatcher:
             ) for id, info in new_tracks.items() if info is not None
         )
 
+    def print_exhaustive(self, new_tracks: Dict[TrackingIdentifier, TrackingState]):
+        for id, info in new_tracks.items():
+            print("\n")
+            print(info.pretty_print())
 
 def generate_progress_bar(at: int, ttl: int):
     return ('█' * at) + ('░' * (ttl - at))
