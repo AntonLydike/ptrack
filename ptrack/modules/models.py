@@ -16,7 +16,6 @@ class IsDataclass(Protocol):
 @dataclass(frozen=True, unsafe_hash=True)
 class TrackingIdentifier:
     number: str
-    postcode: Optional[str] = None
     source: Optional[str] = None
     readable_name: Optional[str] = None
 
