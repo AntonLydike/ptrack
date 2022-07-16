@@ -57,7 +57,7 @@ class PackageWatcher:
         """
         with open(self.source_file_name, 'r') as f:
             data = {
-                _file_line_split(line)[0]: _file_line_split(line)[1:] for line in f
+                _file_line_split(line)[0]: _file_line_split(line)[1:] for line in f if line.strip()
             }
         new_tracks = dict()
         must_rescan = self.should_rescan()
