@@ -131,11 +131,12 @@ class PackageWatcher:
             if info is None:
                 print("{}: not found".format(id.readable_name or id.number))
                 continue
-            print("{}{:<20}: {} {}{} {}{}".format(
+            print("{}{:<20}: {} {} {}{} {}{}".format(
                 color.RED if id in removed else (color.GREEN if id in added else ""),
                 id.readable_name or id.number,
                 print_date_time(info.last_update),
                 generate_progress_bar(*info.progress),
+                get_icon_for(info.state),
                 (" " + info.updates[0].where + ',') if len(info.updates) > 0 and info.updates[0].where else "",
                 info.short_description,
                 color.RESET
