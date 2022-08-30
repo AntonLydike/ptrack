@@ -4,7 +4,6 @@ import subprocess
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
-
 from .models import TrackingState, TrackingIdentifier, TrackingSupplier, TrackingUpdateItem, PackageState
 
 
@@ -20,7 +19,7 @@ def _cut_json_string_from_response(resp: str):
     json_start = resp.index(start_identifier) + len(start_identifier)
     return resp[
            json_start:resp.index(end_identifier, json_start)
-           ].replace('\\"', '"')
+       ].replace('\\"', '"')
 
 
 def _info_from_json_obj(data: dict, id: TrackingIdentifier) -> TrackingState:

@@ -154,7 +154,10 @@ class PackageWatcher:
     def print_exhaustive(self, new_tracks: Dict[TrackingIdentifier, TrackingState]):
         for id, info in new_tracks.items():
             print("\n")
-            print(info.pretty_print())
+            if info is None:
+                print("Nothing for {}".format(id))
+            else:
+                print(info.pretty_print())
 
 def generate_progress_bar(at: int, ttl: int):
     return ('█' * at) + ('░' * (ttl - at))
